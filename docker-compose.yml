@@ -8,3 +8,5 @@ services:
   privoxy:
     container_name: privoxy_service
     image: horellanaf/privoxy:latest
+    ports:
+      - 8118:8118

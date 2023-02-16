@@ -5,6 +5,6 @@ RUN apt update \
     && apt install -y tor \
     && apt install -y obfs4proxy
 
-COPY templates/torrc /etc/tor/torrc
+COPY ./templates/torrc /etc/tor/torrc
 
 CMD ["/usr/bin/tor", "--runasdaemon", "0", "--defaults-torrc", "/usr/share/tor/defaults-torrc", "-f", "/etc/tor/torrc"]
