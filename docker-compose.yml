@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  tor:
+    container_name: tor_service
+    image: horellanaf/tor-http-proxy:latest
+
+  privoxy:
+    container_name: privoxy_service
+    image: horellanaf/privoxy:latest
