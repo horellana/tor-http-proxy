@@ -2,9 +2,9 @@
 # SocksBindAddress 0.0.0.0 # accept connections only from localhost
 # AllowUnverifiedNodes middle,rendezvous
 
-# RunAsDaemon 1
 SOCKSPort 0.0.0.0:9050
 Log notice syslog
 User debian-tor
 Group debian-tor
 DataDirectory /var/lib/tor
+DNSPort 0.0.0.0:9053

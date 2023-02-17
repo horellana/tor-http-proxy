@@ -9,4 +9,10 @@ services:
     container_name: privoxy_service
     image: horellanaf/privoxy:latest
     ports:
-      - 8118:8118
+      - "8118:8118/tcp"
+
+  dnsmasq:
+    container_name: dns_service
+    image: horellanaf/dnsmasq:latest
+    ports:
+      - "53:9053/udp"
