@@ -1,9 +1,13 @@
 version: '3.8'
 
 services:
-  tor:
-    container_name: tor_service
+  tor-socks:
+    container_name: tor_socks_service
     image: horellanaf/tor-http-proxy:latest
+
+  tor-dns:
+    container_name: tor_dns_service
+    image: horellanaf/tor-dns:latest
 
   privoxy:
     container_name: privoxy_service

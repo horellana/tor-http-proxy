@@ -11,6 +11,9 @@ jobs:
           - dockerfile: ./docker-files/tor/Dockerfile
             image: horellanaf/tor-http-proxy
 
+          - dockerfile: ./docker-files/tor-dns/Dockerfile
+            image: horellanaf/tor-dns
+
           - dockerfile: ./docker-files/privoxy/Dockerfile
             image: horellanaf/privoxy
 
