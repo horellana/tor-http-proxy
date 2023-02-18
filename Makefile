@@ -1,3 +1,12 @@
+package:
+	rm -r build || true
+	mkdir -p build
+	cp -r services build/
+	cp -r templates build/
+	cp docker-compose.yml build/
+	cp Makefile build/
+	tar -zcvf tor-proxy.tar.gz build
+
 install:
 	mkdir -p /opt/tor-http-proxy
 	cp -r ./services /opt/tor-http-proxy/services
