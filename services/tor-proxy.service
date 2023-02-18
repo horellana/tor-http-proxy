@@ -1,0 +1,16 @@
+[Unit]
+Description=Tor HTTP(s) proxy service
+After=network.target
+
+[Service]
+User=root
+Restart=always
+RestartSec=1
+RuntimeMaxSec=3600
+WorkingDirectory=/opt/tor-http-proxy
+SyslogIdentifier=tor-http-proxy
+ExecStart=docker-compose up
+ExecStop=docker-compose down
+
+[Install]
+WantedBy=multi-user.target
