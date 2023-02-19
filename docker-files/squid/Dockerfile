@@ -1,8 +1,8 @@
-FROM debian:bookworm
+FROM debian:bookworm-slim
 
-RUN apt update \
-    && apt -y upgrade \
-    && apt install -y squid
+RUN apt-get update \
+    && apt-get -y upgrade \
+    && apt-get install -y squid
 
 COPY ./templates/squid.conf /etc/squid/squid.conf
 COPY ./docker-files/squid/entrypoint.sh ./entrypoint.sh

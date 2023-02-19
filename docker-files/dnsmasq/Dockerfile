@@ -1,8 +1,8 @@
-FROM debian:bookworm
+FROM debian:bookworm-slim
 
-RUN apt update \
-    && apt -y upgrade \
-    && apt install -y dnsmasq
+RUN apt-get update \
+    && apt-get -y upgrade \
+    && apt-get install -y dnsmasq
 
 COPY ./templates/dnsmasq.conf /etc/dnsmasq.conf
 

@@ -1,9 +1,9 @@
-FROM debian:bookworm
+FROM debian:bookworm-slim
 
-RUN apt update \
-    && apt upgrade -y \
-    && apt install -y tor \
-    && apt install -y obfs4proxy
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y tor \
+    && apt-get install -y obfs4proxy
 
 COPY ./templates/torrc /etc/tor/torrc
 
