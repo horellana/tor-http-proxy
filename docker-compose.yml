@@ -18,6 +18,7 @@ services:
     image: ubuntu/squid:latest
     volumes:
       - "./templates/squid.conf:/etc/squid/squid.conf"
+      - squid-data-volume:/var/spool/squid
     ports:
       - "3128:3128/tcp"
 
@@ -26,3 +27,6 @@ services:
     image: horellanaf/dnsmasq:latest
     ports:
       - "53:9053/udp"
+
+volumes:
+  squid-data-volume:
