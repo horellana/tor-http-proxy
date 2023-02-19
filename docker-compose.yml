@@ -15,7 +15,7 @@ services:
 
   squid:
     container_name: http_cache_service
-    image: ubuntu/squid:latest
+    image: horellanaf/squid:latest
     volumes:
       - "./templates/squid.conf:/etc/squid/squid.conf"
       - squid-data-volume:/var/spool/squid

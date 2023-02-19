@@ -20,6 +20,9 @@ jobs:
           - dockerfile: ./docker-files/dnsmasq/Dockerfile
             image: horellanaf/dnsmasq
 
+          - dockerfile: ./docker-files/squid/Dockerfile
+            image: horellanaf/squid
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
