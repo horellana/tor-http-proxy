@@ -5,7 +5,7 @@
 SOCKSPort 0.0.0.0:9050
 SOCKSPolicy accept privoxy
 SOCKSPolicy reject *
-Log notice syslog
+Log notice stdout
 User debian-tor
 Group debian-tor
 DataDirectory /var/lib/tor
