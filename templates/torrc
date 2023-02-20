@@ -3,8 +3,7 @@
 # AllowUnverifiedNodes middle,rendezvous
 
 SOCKSPort 0.0.0.0:9050
-SOCKSPolicy accept privoxy
-SOCKSPolicy reject *
+SOCKSPolicy accept *
 Log notice stdout
 User debian-tor
 Group debian-tor
